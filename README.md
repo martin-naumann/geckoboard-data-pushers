@@ -18,10 +18,10 @@ which will push the number of unresolved vs. the number of all problems from Err
 
 ### Options
 
-option | required | meaning | default
-- | - | - | -
---apiKey | yes | The Geckoboard API Key (see your account settings) | none
---widgetKey | yes | The Geckoboard Widget Key (see the custom widget settings) | none
---dbHost | no | The MongoDB server address | localhost
---dbPort | no | The port the MongoDB server is listening on | 27017
---dbName | no | The database name to use (where Errbit stores the data)| errbit
+option | required | meaning | default  
+--- | --- | --- | ---
+--apiKey | yes | The Geckoboard API Key (see your account settings) | none  
+--widgetKey | yes | The Geckoboard Widget Key (see the custom widget settings) | none  
+--dbHost | no | The MongoDB server address | localhost  
+--dbPort | no | The port the MongoDB server is listening on | 27017  
+--dbName | no | The database name to use (where Errbit stores the data)| errbit  
