@@ -6,9 +6,10 @@ require 'trollop'
 opts = Trollop::options do
   opt :apiKey, "Geckoboard API Key (from your account settings)", :type => :string
   opt :widgetKey, "Geckoboard Widget Key (from the custom widget settings)", :type => :string
+  opt :reportFile, "Jmeter .jtl report file.", :type => :string
 end
 
-reader = XML::Reader.file(ARGV[0])
+reader = XML::Reader.file(opts[:reportFile])
 reader.read #Loads the file
 
 #Iterate over the HTTP Samples
