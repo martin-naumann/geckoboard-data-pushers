@@ -1,0 +1,6 @@
+# A sample Gemfile
+source "https://rubygems.org"
+
+gem 'geckoboard-push', :git => 'git@github.com:martin-naumann/geckoboard-push.git'
+gem 'libxml-ruby', '>= 0.8.3'
+gem 'trollop'

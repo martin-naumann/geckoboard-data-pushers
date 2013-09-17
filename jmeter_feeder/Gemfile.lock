@@ -1,0 +1,23 @@
+GIT
+  remote: git@github.com:martin-naumann/geckoboard-push.git
+  revision: 4157a55e17fd8949c072305ecd54e871914f7811
+  specs:
+    geckoboard-push (0.1.1)
+      httparty (~> 0.8.1)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    httparty (0.8.3)
+      multi_json (~> 1.0)
+      multi_xml
+    libxml-ruby (2.7.0)
+    multi_json (1.8.0)
+    multi_xml (0.5.5)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  geckoboard-push!
+  libxml-ruby (>= 0.8.3)

@@ -1,0 +1,9 @@
+# A sample Gemfile
+source "https://rubygems.org"
+
+gem 'mongo'
+gem 'bson_ext'
+
+gem 'trollop'
+
+gem 'geckoboard-push', :git => 'https://github.com/martin-naumann/geckoboard-push.git', :branch => 'geckometer' 
