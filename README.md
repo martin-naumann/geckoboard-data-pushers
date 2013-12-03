@@ -36,6 +36,16 @@ For that, it's best to create a Cronjob:
     
 which will push the number of unresolved vs. the number of all problems from Errbit to Geckoboard.
 
+## Errbit Resolution stats
+This widget shows the number of unresolved problems along with a sparkline of resolved problems per month (for the last 3 months).
+
+For that, it's best to create a Cronjob:
+
+    */5 * * * * bundle exec ruby errbit_resolution_feeder.rb --apiKey "YOUR API KEY" --widgetKey "YOUR WIDGET KEY"
+
+which will push the number of unresolved problems and the sparkline of resolved problems for the last 3 months to Geckoboard.
+
+
 ### Options
 
 option | required | meaning | default  
