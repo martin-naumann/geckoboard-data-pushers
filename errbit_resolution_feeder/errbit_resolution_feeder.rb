@@ -17,7 +17,7 @@ db = MongoClient.new(opts[:dbHost], opts[:dbPort]).db(opts[:dbName])
 problems = db.collection("problems")
 
 open_problems_number = problems.find({resolved: false}).to_a.count
-problems_resolved_per_month = db.problems.aggregate([ { "$match" => { resolved: true } }, { "$project" => { month_resolved: { "$month" => "$resolved_at"  } } }, { "$group" => { "_id" => "$month_resolved", number: { "$sum" => 1 } } }, { "$sort" => { "_id" => 1 } }, { "$limit" => 3 } ]).map { |p| p["number"] }
+problems_resolved_per_month = problems.aggregate([ { "$match" => { resolved: true } }, { "$project" => { month_resolved: { "$month" => "$resolved_at"  } } }, { "$group" => { "_id" => "$month_resolved", number: { "$sum" => 1 } } }, { "$sort" => { "_id" => 1 } }, { "$limit" => 3 } ]).map { |p| p["number"] }
 
 puts "FOUND #{open_problems_number} unresolved problems"
 puts "Resolutions for this month: #{problems_resolved[2]}"
